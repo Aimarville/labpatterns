@@ -11,10 +11,21 @@ public class Main {
 		pacient.addSymptomByName("cefalea", 1);
 		pacient.addSymptomByName("astenia", 3);
 		
+		Covid19Pacient pacient2=new Covid19Pacient("Asier", 20);
+		
+		pacient2.addSymptomByName("fiebre", 3);
+		pacient2.addSymptomByName("tos seca", 2);
+		pacient2.addSymptomByName("dolor de garganta", 1);
+		
 		ShowPacientTableGUI gui=new ShowPacientTableGUI(pacient);
 		gui.setPreferredSize(
 			      new java.awt.Dimension(300, 200));
 		gui.setVisible(true);
+		
+		ShowPacientTableGUI gui2=new ShowPacientTableGUI(pacient2);
+		gui2.setPreferredSize(
+			      new java.awt.Dimension(300, 200));
+		gui2.setVisible(true);
 
 
 	}
