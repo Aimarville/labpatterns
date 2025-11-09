@@ -4,7 +4,7 @@ import java.util.*;
 import factory.SymptomFactory;
 import iterator.Covid19PacientIterator;
 
-public class Covid19Pacient {
+public class Covid19Pacient extends Observable {
 	private String  name; 
 	private int age;
 	private Map<Symptom,Integer> symptoms=new HashMap<Symptom,Integer>();
@@ -69,6 +69,7 @@ public class Covid19Pacient {
 		notifyObservers();
 		return s;
 	}
+	
 	public Iterator iterator() {
 		return new Covid19PacientIterator(this.symptoms.keySet());
 	}
